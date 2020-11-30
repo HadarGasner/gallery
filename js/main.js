@@ -1,9 +1,9 @@
 function init(){
-    renderProfects()
+    renderProjects()
 }
 
 
-function renderProfects() {
+function renderProjects() {
     var projects = getProjecks()
     
     var strHtml = '';
@@ -29,15 +29,16 @@ function renderProfects() {
 }
 
 function onOpenProject(id){
+  console.log();
     console.log(id);
     var project = getProjeckByID(id)
     var strHtml = ` <h2>${project.name}</h2>
     <p class="item-intro text-muted">${project.about}</p>
     <img class="img-fluid d-block mx-auto" src="img/portfolio/${project.ulrImg}" alt="">
-    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis
-    dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
-    maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+    <p>${project.description}</p>
+    
   <ul class="list-inline">
+  <button onclick="window.location.href='${project.link}'" type="button" class="btn btn-primary">Go To The Project</button>
     <li>Date: November 2020</li>
     <li>Client: Explore</li>
     <li>Category: ${project.tags}</li>
@@ -49,20 +50,3 @@ function onOpenProject(id){
     $('.modal-body').html(strHtml)
     
 }
-
-              
-                // <h2>Project Name</h2>
-                // <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                // <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                // <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis
-                //   dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate,
-                //   maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                // <ul class="list-inline">
-                //   <li>Date: January 2017</li>
-                //   <li>Client: Explore</li>
-                //   <li>Category: Graphic Design</li>
-                // </ul>
-                // <button class="btn btn-primary" data-dismiss="modal" type="button">
-                //     <i class="fa fa-times"></i>
-                //     Close Project</button>
-             

@@ -8,11 +8,25 @@ p {
 a {
     color: #fed136;
 }
+
+.intro-lead-in{
+    color: #222222;
+    font-weight: bold;
+}
 a.active,
 a:active,
 a:focus,
 a:hover {
     color: #fec503;
+}
+.img-fluid{
+    height: 400px;
+    width: 400px;
+}
+
+.d-block{
+    height: 600px;
+    width: 600px;
 }
 h1,
 h2,
@@ -211,11 +225,15 @@ header.masthead .intro-text .intro-lead-in {
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 header.masthead .intro-text .intro-heading {
+    -webkit-text-stroke: 1px white; /* width and color */
+
+    font-family: sans; color: yellow;
+    color: #222222;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
     margin-bottom: 25px;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
     text-transform: uppercase;
 }
 @media (min-width: 768px) {

@@ -5,11 +5,10 @@ function init(){
 
 function renderProjects() {
     var projects = getProjecks()
-
+    
     var strHtml = '';
  
     projects.map(function (project) {
-      console.log(project.ulrImg);
         strHtml +=  `<div class="col-md-4 col-sm-6 portfolio-item">
    <a onClick="onOpenProject(${project.id})" class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
     <div class="portfolio-hover">
